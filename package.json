@@ -1,0 +1,10 @@
+{
+  "name": "omnibox-search",
+  "description": "Web browser extensions for omnibox searching.",
+  "license": "Unlicense",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "type": "module"
+}
