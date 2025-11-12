@@ -1,4 +1,7 @@
 {
+  "search.exclude": {
+    "**/package-lock.json": true
+  },
   "eslint.format.enable": true,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
