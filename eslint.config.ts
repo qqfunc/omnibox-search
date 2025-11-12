@@ -1,4 +1,6 @@
+import * as path from 'node:path'
 import { defineConfig } from 'eslint/config'
+import { includeIgnoreFile } from '@eslint/compat'
 import js from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import tseslint from 'typescript-eslint'
@@ -8,6 +10,7 @@ import markdown from '@eslint/markdown'
 import css from '@eslint/css'
 
 export default defineConfig([
+  includeIgnoreFile(path.join(import.meta.dirname, '.gitignore'), 'Imported .gitignore patterns'),
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: { js, stylistic },
@@ -20,18 +23,18 @@ export default defineConfig([
   },
   {
     files: ['**/*.{jsx,tsx}'],
-    plugins: { react: pluginReact },
+    plugins: { pluginReact },
     extends: [pluginReact.configs.flat.recommended],
   },
   {
     files: ['**/*.json'],
-    ignores: ['**/package-lock.json', '**/tsconfig.json', '.vscode/settings.json'],
+    ignores: ['**/package-lock.json', '**/tsconfig.json', '.vscode/*.json', '.renovaterc.json'],
     plugins: { json },
     language: 'json/json',
     extends: [json.configs.recommended],
   },
   {
-    files: ['**/*.jsonc', '**/tsconfig.json', '.vscode/settings.json'],
+    files: ['**/*.jsonc', '**/tsconfig.json', '.vscode/*.json', '.renovaterc.json'],
     plugins: { json },
     language: 'json/jsonc',
     extends: [json.configs.recommended],
