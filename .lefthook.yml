@@ -1,0 +1,34 @@
+pre-commit:
+  # parallel: true
+  jobs:
+    - name: TypeScript
+      run: npx tsgo
+    - name: ESLint
+      run: npx eslint --cache --concurrency auto
+    - name: Knip
+      run: npx knip --strict --cache
+
+commit-msg:
+  parallel: true
+  jobs:
+    - name: commitlint
+      run: npx commitlint --edit $1
+
+check:
+  parallel: true
+  jobs:
+    - name: TypeScript
+      run: npx tsgo
+    - name: ESLint
+      run: npx eslint --cache --concurrency auto
+    - name: Knip
+      run: npx knip --strict --cache
+
+fix:
+  jobs:
+    - name: TypeScript
+      run: npx tsgo
+    - name: Knip
+      run: npx knip --strict --cache --fix
+    - name: ESLint
+      run: npx eslint --fix --cache --concurrency auto

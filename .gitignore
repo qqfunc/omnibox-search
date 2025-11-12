@@ -7,6 +7,9 @@ dist/
 # Cache
 .eslintcache
 
+# Lefthook
+.lefthook-local.yml
+
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json
