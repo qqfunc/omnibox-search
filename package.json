@@ -14,6 +14,7 @@
     "@tsconfig/recommended": "^1.0.12",
     "@tsconfig/vite-react": "^7.0.1",
     "@typescript/native-preview": "^7.0.0-dev.20251112.1",
+    "editorconfig-checker": "^6.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",
     "knip": "^5.69.0",

@@ -1,5 +1,5 @@
 pre-commit:
-  # parallel: true
+  parallel: true
   jobs:
     - name: TypeScript
       run: npx tsgo
@@ -7,6 +7,8 @@ pre-commit:
       run: npx eslint --cache --concurrency auto
     - name: Knip
       run: npx knip --strict --cache
+    - name: editorconfig-checker
+      run: npx editorconfig-checker
 
 commit-msg:
   parallel: true
@@ -23,6 +25,8 @@ check:
       run: npx eslint --cache --concurrency auto
     - name: Knip
       run: npx knip --strict --cache
+    - name: editorconfig-checker
+      run: npx editorconfig-checker
 
 fix:
   jobs:
@@ -32,3 +36,5 @@ fix:
       run: npx knip --strict --cache --fix
     - name: ESLint
       run: npx eslint --fix --cache --concurrency auto
+    - name: editorconfig-checker
+      run: npx editorconfig-checker
