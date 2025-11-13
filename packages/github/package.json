@@ -1,0 +1,6 @@
+{
+  "name": "@omnibox-search/github",
+  "description": "Search Github in browser omnibox.",
+  "license": "Unlicense",
+  "type": "module"
+}
