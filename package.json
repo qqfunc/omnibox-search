@@ -2,6 +2,10 @@
   "name": "omnibox-search",
   "description": "Web browser extensions for omnibox searching.",
   "license": "Unlicense",
+  "scripts": {
+    "check": "lefthook run check",
+    "fix": "lefthook run fix"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
