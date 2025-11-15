@@ -2,5 +2,17 @@
   "name": "@omnibox-search/github",
   "description": "Search Github in browser omnibox.",
   "license": "Unlicense",
+  "scripts": {
+    "postinstall": "NODE_OPTIONS='--no-experimental-webstorage' wxt prepare",
+    "start": "wxt"
+  },
+  "dependencies": {
+    "@wxt-dev/webextension-polyfill": "^1.0.0",
+    "webextension-polyfill": "^0.12.0"
+  },
+  "devDependencies": {
+    "wxt": "^0.20.11"
+  },
+  "private": true,
   "type": "module"
 }

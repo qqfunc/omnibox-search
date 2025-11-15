@@ -5,7 +5,11 @@ node_modules/
 dist/
 
 # Cache
+*.tsbuildinfo
 .eslintcache
+
+# WXT
+.wxt/
 
 # Lefthook
 .lefthook-local.yml
