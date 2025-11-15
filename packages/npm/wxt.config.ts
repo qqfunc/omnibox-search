@@ -5,8 +5,8 @@ export default defineConfig({
   outDir: 'dist',
   modules: ['@wxt-dev/webextension-polyfill'],
   manifest: {
-    name: 'Omnibox Search for GitHub',
-    short_name: 'Search GitHub',
-    omnibox: { keyword: '@gh' },
+    name: 'Omnibox Search for npm',
+    short_name: 'Search npm',
+    omnibox: { keyword: '@npm' },
   },
 })

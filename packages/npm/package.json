@@ -1,6 +1,6 @@
 {
-  "name": "@omnibox-search/github",
-  "description": "Search Github in browser omnibox.",
+  "name": "@omnibox-search/npm",
+  "description": "Search npm registry in browser omnibox.",
   "license": "Unlicense",
   "scripts": {
     "postinstall": "NODE_OPTIONS='--no-experimental-webstorage' wxt prepare",
