@@ -3,8 +3,8 @@
   "description": "Search Github in browser omnibox.",
   "license": "Unlicense",
   "scripts": {
-    "postinstall": "NODE_OPTIONS='--no-experimental-webstorage' wxt prepare",
-    "start": "NODE_OPTIONS='--no-experimental-webstorage' wxt"
+    "postinstall": "wxt prepare",
+    "start": "wxt"
   },
   "dependencies": {
     "@wxt-dev/webextension-polyfill": "^1.0.0",
